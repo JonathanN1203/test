@@ -21,4 +21,4 @@ jobs:
       image: jonathann1203/ipv64_client_dockercontainer:v1
     steps:
       - name: Check for dockerenv file
-        run: pip3 version
+        run: pip3 --version
