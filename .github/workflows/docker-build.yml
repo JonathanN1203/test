@@ -30,6 +30,6 @@ jobs:
       - name: Build image and push to Docker Hub
         uses: docker/build-push-action@v3
         with:
-          contex: docker/.
+          contex: docker/
           push: true
           tags: jonathann1203/node64_client:v1
