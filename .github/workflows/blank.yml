@@ -22,10 +22,11 @@ jobs:
     container:
       image: jonathann1203/ipv64_client_dockercontainer:v1
     steps:
-      - name: Check for dockerenv file
-        run: pip3 --version
+
       - name: "check is MY_SECRET exists"
         env: 
-            DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN  }}
+            DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN2  }}
         if: ${{ env.DOCKERHUB_TOKEN == '' }}
         run: 'echo "echo the secret \"MY_SECRET\" has not been made; echo please go to \"settings \> secrets \> actions\" to create it"'
+      - name: Check pip version
+        run: pip3 --version
