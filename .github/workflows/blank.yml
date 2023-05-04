@@ -18,7 +18,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   container-test-job:
-    if: ${{ github.ref == 'ref/heads/main' }} && ${{ secrets.MAIN_WIP != null }}
+    if: ${{ github.ref == 'ref/heads/main' }} && ${{ github.repository == "asd" }}
     runs-on: ubuntu-latest
     container:
       image: jonathann1203/ipv64_client_dockercontainer:v1
