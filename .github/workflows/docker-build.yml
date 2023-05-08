@@ -31,5 +31,6 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           file: docker/Dockerfile
+          platforms: linux/arm64/v8
           push: true
           tags: jonathann1203/test:latest
